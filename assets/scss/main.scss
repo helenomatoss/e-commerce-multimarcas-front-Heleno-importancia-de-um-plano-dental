@@ -1,0 +1,29 @@
+@import './-fonts.scss';
+@import './-variables.scss';
+@import './-typography.scss';
+@import './-overides.scss';
+
+.v-application {
+  &.odp-g-scale {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+
+  .v-container:not(.v-container--fluid) {
+    max-width: $container-size;
+    padding: $container-spacing;
+    margin: 0 auto;
+  }
+
+  // For accessability
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+  }
+}
